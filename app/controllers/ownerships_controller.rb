@@ -47,7 +47,5 @@ class OwnershipsController < ApplicationController
     elsif params[:type] == "Want"
       current_user.unwant(@item)
     end
-
   end
 end
-
