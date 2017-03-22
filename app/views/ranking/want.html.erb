@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="container-inner inner-sm clearfix">
+    <h1>Wantランキング</h1>
+    <% @items.each.with_index(1) do |item,i| %>
+    <div class="panel panel-info">
+    <div class="panel-heading">
+    <h3 class="panel-title"><%= "#{i}位" %></h3>
+     </div>
+     <div class="panel-body">
+       <!-- タイトル -->
+    <%= link_to item.title , item %><br>
+    <!-- 画像 -->
+    <%= image_tag(item.medium_image , alt: item.title) %><br>
+    </div>
+    </div>
+    <% end %>
+  </div>
+</div>
